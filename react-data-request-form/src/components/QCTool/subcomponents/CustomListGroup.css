@@ -1,0 +1,63 @@
+/* CustomListGroup.css */
+
+.custom-list-group {
+  border: none;
+}
+
+.custom-list-item {
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-value {
+  display: inline-block;
+  min-width: 200px;
+  background-color: #e0e0e0;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.description-box {
+  border: 1px solid #000;
+  background-color: #d3d3d3;
+}
+
+strong {
+  min-width: 150px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .custom-list-item {
+    flex-direction: column;
+  }
+
+  strong,
+  .custom-value {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container input {
+  padding-right: 30px; /* Add space for the warning icon */
+}
+
+.warning-icon {
+  position: absolute;
+  right: 10px; /* Position inside the input */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffc107; /* Warning color */
+  cursor: pointer; /* Allow hover */
+  z-index: 1; /* Ensure it's above the input */
+}

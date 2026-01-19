@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.DS_Store
+.vscode/
+venv/
+.env
+.env_private.txt
+static/build/
+myenv/
+.env
+node_modules/
+package-lock.json

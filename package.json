@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@types/react-beautiful-dnd": "^13.1.8"
+  },
+  "dependencies": {
+    "@types/react-select": "^5.0.0",
+    "@types/react-select-country-list": "^2.2.3"
+  }
+}

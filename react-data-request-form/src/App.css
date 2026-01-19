@@ -1,0 +1,240 @@
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.highlighted-metric {
+  background-color: #fff9c4 !important; 
+  border: 2px solid #ffeb3b !important; 
+  border-radius: 4px;
+  box-shadow: 0 0 6px 2px rgba(255, 235, 59, 0.7);
+  transition: all 0.3s ease;
+  animation: singleGlow 3s ease-in-out forwards; 
+}
+
+@keyframes singleGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 235, 59, 0);
+    background-color: #fffde7; 
+  }
+  20% {
+    box-shadow: 0 0 8px 3px rgba(255, 235, 59, 0.8);
+    background-color: #fff9c4;
+  }
+  80% {
+    box-shadow: 0 0 6px 2px rgba(255, 235, 59, 0.6);
+    background-color: #fff9c4;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 235, 59, 0);
+    background-color: transparent; 
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.metrics-logic-summary {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.metrics-box {
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.required-box {
+  background-color: #fdfdfd;
+  border: 1px solid #d6d6d6;
+}
+
+.or-box {
+  padding: 8px;
+  padding-top: 12px;
+  background-color: #f3f4f6; 
+  border: 1px solid #bcbcbc;
+}
+
+.or-container {
+  background-color: #fdfdfd;
+  border: 1px solid #d6d6d6;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.optional-box {
+  background-color: #fdfdfd; 
+  border: 1px solid #d6d6d6;
+}
+
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+.metric-chip {
+  display: flex;
+  align-items: center;
+  background: #ffffff;          
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border: 1px solid #adb5bd;    
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  cursor: grab;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+
+.remove-btn {
+  background: none;
+  border: none;
+  margin-left: 6px;
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+.remove-btn:hover {
+  color: #000;
+}
+
+
+.metrics-box h6 {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #343a40;
+}
+
+
+.or-box strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #495057;
+}
+
+
+.metrics-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.search-dropdown {
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar for dropdown */
+.search-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.search-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.search-dropdown::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.search-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Modern Login Modal Styles */
+.login-modal .modal-content {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.login-modal .modal-header {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.login-modal .modal-header .btn-close {
+  padding: 1rem;
+}
+
+.login-modal .modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.login-modal .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+}
+
+.login-modal .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-modal .btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.login-modal .btn-outline-secondary {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
