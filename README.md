@@ -102,5 +102,3 @@ npm run build
     pip install --upgrade Flask
     pip install --upgrade Jinja2
     ```
-    
-Follow these instructions carefully to ensure a smooth setup and operation. For any issues or feedback, please feel free to contact Lahari via Slack or email at lmuthyal@usc.edu
